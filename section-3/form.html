@@ -1,0 +1,55 @@
+<!---html can only display forms not process them..The action is server-side endpoint and the method is the HTTP method (GET or POST) used to submit the form data to the server->
+<!-- =====================
+<input> elements
+        text -- single line comment
+        email -- for email addresses
+        password -- for passwords
+        number -- for numeric input
+        textarea -- for multi-line text input
+        select -- for dropdown menus
+        checkbox -- for multiple selections
+        radio -- for single selection from multiple options
+        file -- for file uploads
+        range -- for selecting a value from a range (slider)
+        date --  date picker
+        color -- for color selection
+        submit -- for form submission
+
+id connects label to input and is used for styling and scripting
+required attribute makes the field mandatory
+====================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Example</title>
+</head>
+<body>
+    <form action="/submit" method="post"> <!-- POST : to submit sensitive data -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" 
+        placeholder="Enter Name" 
+        value="Shanjida "/><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required  value="test@test.com" disabled> <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required  
+           minlength="3"
+           maxlength="10"><br>
+<div> <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+</div>
+<div> <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+</div>
+<div> <br>
+        <button type="submit">Submit</button>
+</div>
+    </form>
+</body>
+</html>
