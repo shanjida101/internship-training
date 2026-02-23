@@ -23,3 +23,4 @@ The projects follow the Modern HTML & CSS curriculum and are organized by topic 
 
 More projects will be added as the training progresses.
 
+
