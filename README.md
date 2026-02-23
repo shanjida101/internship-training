@@ -1,26 +1,55 @@
-﻿# Internship Training
+# Frontend Internship Training
 
-This repository contains my structured frontend development training projects completed during my internship preparation.
+This repository contains my structured frontend development training projects completed as part of my internship preparation.
 
-The projects follow the Modern HTML & CSS curriculum and are organized by topic and challenge.
-
----
-
-## 📂 Projects
-
-
-
-
-
-## 🛠️ Technologies Used
-
-- HTML5
-- VS Code
-- Git & GitHub
+The projects follow the **Modern HTML & CSS** curriculum and are organized by topic, concept, and practical challenges. Each project focuses on writing clean, semantic, and scalable HTML before moving into styling and layout systems.
 
 ---
 
+## 🌐 Live Deployment
 
-More projects will be added as the training progresses.
+All projects are deployed on Netlify and can be accessed here:
 
+🔗 https://effortless-rabanadas-0a1083.netlify.app/
 
+Individual projects can be accessed through their respective folder paths.
+
+---
+
+## 📂 Project Structure
+
+Projects are organized inside the repository by topic and challenge.  
+Each project contains structured HTML files and will later include styling and enhancements.
+
+Example structure:
+
+```
+internship-training/
+│
+├── index.html (project navigation page)
+└── challanges/
+      ├── price_grid.html
+      ├── appartment-form.html
+      └── more projects coming soon...
+```
+
+As the training progresses:
+
+- New HTML concept exercises will be added
+- Layout challenges (Flexbox & Grid) will be included
+- Form handling projects will expand
+- Responsive design improvements will be implemented
+- JavaScript-based projects will be introduced
+
+This repository will grow progressively to reflect continuous skill development.
+
+---
+
+---
+
+## 🚀 Ongoing Development
+
+This repository is actively maintained and updated as part of my internship training journey.  
+New projects and improvements will be added consistently as I advance through the curriculum.
+
+---
