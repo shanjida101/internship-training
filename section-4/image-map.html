@@ -2,10 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Map</title>
+    <title>Image Map Example</title>
 </head>
 <body>
-    
+
+    <h2>Image Map</h2>
+
+    <img 
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+        alt="Ocean Image"
+        usemap="#example-map"
+        width="600"
+    >
+
+    <map name="example-map">
+
+        <area 
+            shape="rect" 
+            coords="200,222,250,200" 
+            href="https://www.google.com"
+            alt="Google"
+            target="_blank"
+        >
+
+        <area 
+            shape="circle" 
+            coords="400,200,80" 
+            href="https://www.wikipedia.org"
+            alt="Wikipedia"
+            target="_blank"
+        >
+
+    </map>
+
 </body>
 </html>
