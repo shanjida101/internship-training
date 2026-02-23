@@ -10,14 +10,7 @@ The projects follow the Modern HTML & CSS curriculum and are organized by topic 
 
 
 
-## 🚀 Goals
 
-- Master semantic HTML
-- Build clean, scalable structure
-- Prepare for professional frontend development
-- Practice writing production-ready markup
-
----
 
 ## 🛠️ Technologies Used
 
@@ -29,3 +22,4 @@ The projects follow the Modern HTML & CSS curriculum and are organized by topic 
 
 
 More projects will be added as the training progresses.
+
