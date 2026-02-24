@@ -1,4 +1,4 @@
-# Frontend Internship Training
+# Internship Training
 
 This repository contains my structured frontend development training projects completed as part of my internship preparation.
 
@@ -12,7 +12,7 @@ All projects are deployed on Netlify and can be accessed here:
 
 🔗 https://effortless-rabanadas-0a1083.netlify.app/
 
-Individual projects can be accessed through their respective folder paths.
+Individual projects can be accessed through the same path.
 
 ---
 
@@ -26,11 +26,14 @@ Example structure:
 ```
 internship-training/
 │
+├── section-2..
 ├── index.html (project navigation page)
 └── challanges/
       ├── price_grid.html
       ├── appartment-form.html
       └── more projects coming soon...
+
+
 ```
 
 As the training progresses:
@@ -53,3 +56,4 @@ This repository is actively maintained and updated as part of my internship trai
 New projects and improvements will be added consistently as I advance through the curriculum.
 
 ---
+
