@@ -36,13 +36,7 @@ internship-training/
 
 ```
 
-As the training progresses:
 
-- New HTML concept exercises will be added
-- Layout challenges (Flexbox & Grid) will be included
-- Form handling projects will expand
-- Responsive design improvements will be implemented
-- JavaScript-based projects will be introduced
 
 This repository will grow progressively to reflect continuous skill development.
 
@@ -56,4 +50,5 @@ This repository is actively maintained and updated as part of my internship trai
 New projects and improvements will be added consistently as I advance through the curriculum.
 
 ---
+
 
