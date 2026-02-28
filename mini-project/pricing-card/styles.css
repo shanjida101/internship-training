@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.6;
+    background-color: #27264b;
+    color: #433f63;
+
+}
+a{
+    text-decoration: none;
+    color: #007bff;
+}
+ul
+{
+    list-style-type: none;
+}
+li{
+    margin-bottom: 10px;
+}
+.container{
+   max-width: 1100px;
+   background-color:#f8fafe ;
+   border-radius: 10px;
+   margin: 0 auto;
+   margin-top: 50px;
+   padding: 70px 60px;
+}
+
+.pricing {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card h2 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 15px;
+    background: #f8fafe;
+    color: #333;
+}
+.card-pro h2{
+    background: linear-gradient( 90deg, rgba(194, 277, 255, 1)13% , rgba(118,118,254,1)100%);
+    color: white;
+}
+.card-enterprise h2{
+    background: linear-gradient( 90deg, rgba(255, 194, 194, 1)13% , rgba(255, 180, 180, 1)100%);
+    color: white;
+}
+.card.price {
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.card .price .sup {
+    font-size: 18px;
+    position: relative;
+    left: -5px;
+}
+
+.card .price .span {
+    font-size: 18px;
+   margin-left: 5px;
+}
+.card .main-text {
+    font-size: 14px;
+    margin-bottom: 50px;
+   
+}
+.btn {
+    display: block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color:#27264b;
+    border: 2px solid #27264b;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary, .btn:hover{
+    background-color: #27264b;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #fff;
+    color: #27264b;
+}
+.card ul {
+    text-align: left;
+    margin-top: 50px;
+}
+.card ul li i {
+    color: #98ca9e;
+    margin-right: 10px;
+}
