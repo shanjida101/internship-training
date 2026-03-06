@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container{
+    background:white ;
+    padding: 70px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.1);
+  
+}
+.form-group{
+    margin-bottom: 15px;
+    
+     
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+label{
+    display: block;
+    margin-bottom:10px ;
+    font-weight: bold;
+}
+
+input [type ='text'],
+input [type ='email'],
+textarea{
+     width: 100%;
+     padding: 20px;
+     border: 1px solid #ccc ;
+     border-radius: 5px;
+     font-family: inherit;
+
+}
+input:focus, textarea:focus{
+    outline :2px solid #007bff;
+    background:blue;
+
+}
+textarea{
+    height:  30px;
+}
