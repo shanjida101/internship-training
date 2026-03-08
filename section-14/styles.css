@@ -110,6 +110,7 @@ a[href^="https://"]
 .section:nth-of-type(2) p:nth-of-type(2) {
   font-weight: bold;
 }
+:hover
 
 .section:has(p) > ul  {
   background-color: pink;
