@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Analog Clock Face</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="clock">
+
+  <div id="second" class="hand hour"></div>
+  <div id="minute" class="hand minute"></div>
+
+</div>
+
+<script>
+
+let secondAngle = 0;
+let minuteAngle = 0;
+
+function runClock(){
+
+  secondAngle = secondAngle + 6;
+  minuteAngle = minuteAngle + 0.1;
+
+  document.getElementById("second").style.transform =
+  "translateX(-50%) rotate(" + secondAngle + "deg)";
+
+  document.getElementById("minute").style.transform =
+  "translateX(-50%) rotate(" + minuteAngle + "deg)";
+}
+
+setInterval(runClock,1000);
+
+</script>
+
+</body>
+</html>

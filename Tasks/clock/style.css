@@ -1,0 +1,42 @@
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:white;
+}
+
+
+.clock{
+  width:400px;
+  height:400px;
+  border:2px solid gray;
+  border-radius:50%;
+  position:relative;
+}
+
+
+.hand{
+  position:absolute;
+  bottom:50%;
+  left:50%;
+  transform-origin:bottom center;
+}
+
+
+
+
+.hour{
+  width:2px;
+  height:190px;
+  background:red;
+  transform:translateX(-50%) rotate(-40deg);
+}
+
+
+.minute{
+  width:2px;
+  height:130px;
+  background:blue;
+  transform:translateX(-50%) rotate(20deg);
+}
