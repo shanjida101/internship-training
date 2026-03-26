@@ -19,30 +19,30 @@
         
         <nav class="nav-links">
             <a href="#">Home</a>
-            <a href="#">Shop</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="/task2.3/shop.html">Shop</a>
+            <a href="/task2.3/about.html">About</a>
+            <a href="/task2.3/contact.html">Contact</a>
         </nav>
 
 <div class="nav-icons">
-    <span class="custom-icon">
-        <svg width="25" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-            <circle cx="8.5" cy="7" r="4"></circle>
-            <line x1="20" y1="8" x2="20" y2="14" stroke-width="2.5"></line>
-            <line x1="20" y1="18" x2="20.01" y2="18" stroke-width="2.5"></line>
-        </svg>
-    </span>
-    <i data-lucide="search"></i>
-    <i data-lucide="heart"></i>
-    <i data-lucide="shopping-cart"></i>
+    <a href="account.html" class="icon-btn">
+        <img src="images/mdi_account-alert-outline.png" alt="Account">
+    </a>
+
+    <a href="search.html" class="icon-btn">
+        <img src="images/Vector (3).png" alt="Search">
+    </a>
+
+    <a href="wishlist.html" class="icon-btn">
+        <img src="images/akar-icons_heart.png" alt="Wishlist">
+    </a>
+
+    <a href="cart.html" class="icon-btn">
+        <img src="images/ant-design_shopping-cart-outlined.png" alt="Cart">
+    </a>
 </div>
 
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
-    </header>
+ </header>
 
     <main class="banner">
         <div class="hero-card">
@@ -87,26 +87,20 @@
 
 <section class="products">
     <h2 class="section-title">Our Products</h2>
-    
-<div class="product-overlay">
-    <button class="btn-add">Add to cart</button>
-    <div class="overlay-actions">
-        <span class="action-item">
-            <i class="fa-solid fa-share-nodes"></i> Share
-        </span>
-        <span class="action-item">
-            <i class="fa-solid fa-right-left"></i> Compare
-        </span>
-        <span class="action-item">
-            <i class="fa-regular fa-heart"></i> Like
-        </span>
-    </div>
-</div>
+
     <div class="product-grid">
         <div class="product-card">
             <div class="product-image">
                 <span class="badge badge-discount">-30%</span>
                 <img src="images/syltherine.png" alt="Syltherine">
+                <div class="product-overlay">
+                    <button class="btn-add">Add to cart</button>
+                    <div class="overlay-actions">
+                        <span class="action-item"><i class="fa-solid fa-share-nodes"></i> Share</span>
+                        <span class="action-item"><i class="fa-solid fa-right-left"></i> Compare</span>
+                        <span class="action-item"><i class="fa-regular fa-heart"></i> Like</span>
+                    </div>
+                </div>
             </div>
             <div class="product-info">
                 <h3>Syltherine</h3>
@@ -120,13 +114,13 @@
 
         <div class="product-card">
             <div class="product-image">
-                <img src="leviosa.jpg" alt="Leviosa">
+                <img src="images/leviosa.png" alt="Leviosa">
                 <div class="product-overlay">
                     <button class="btn-add">Add to cart</button>
                     <div class="overlay-actions">
-                        <span><i class="share-icon"></i> Share</span>
-                        <span><i class="compare-icon"></i> Compare</span>
-                        <span><i class="like-icon"></i> Like</span>
+                        <span class="action-item"><i class="fa-solid fa-share-nodes"></i> Share</span>
+                        <span class="action-item"><i class="fa-solid fa-right-left"></i> Compare</span>
+                        <span class="action-item"><i class="fa-regular fa-heart"></i> Like</span>
                     </div>
                 </div>
             </div>
@@ -143,6 +137,14 @@
             <div class="product-image">
                 <span class="badge badge-discount">-50%</span>
                 <img src="images/lolito.png" alt="Lolito">
+                <div class="product-overlay">
+                    <button class="btn-add">Add to cart</button>
+                    <div class="overlay-actions">
+                        <span class="action-item"><i class="fa-solid fa-share-nodes"></i> Share</span>
+                        <span class="action-item"><i class="fa-solid fa-right-left"></i> Compare</span>
+                        <span class="action-item"><i class="fa-regular fa-heart"></i> Like</span>
+                    </div>
+                </div>
             </div>
             <div class="product-info">
                 <h3>Lolito</h3>
@@ -157,7 +159,15 @@
         <div class="product-card">
             <div class="product-image">
                 <span class="badge badge-new">New</span>
-                <img src="respira.jpg" alt="Respira">
+                <img src="images/Respira.jpg" alt="Respira">
+                <div class="product-overlay">
+                    <button class="btn-add">Add to cart</button>
+                    <div class="overlay-actions">
+                        <span class="action-item"><i class="fa-solid fa-share-nodes"></i> Share</span>
+                        <span class="action-item"><i class="fa-solid fa-right-left"></i> Compare</span>
+                        <span class="action-item"><i class="fa-regular fa-heart"></i> Like</span>
+                    </div>
+                </div>
             </div>
             <div class="product-info">
                 <h3>Respira</h3>
@@ -170,7 +180,15 @@
 
         <div class="product-card">
             <div class="product-image">
-                <img src="grifo.jpg" alt="Grifo">
+                <img src="images/grifo.png" alt="Grifo">
+                <div class="product-overlay">
+                    <button class="btn-add">Add to cart</button>
+                    <div class="overlay-actions">
+                        <span class="action-item"><i class="fa-solid fa-share-nodes"></i> Share</span>
+                        <span class="action-item"><i class="fa-solid fa-right-left"></i> Compare</span>
+                        <span class="action-item"><i class="fa-regular fa-heart"></i> Like</span>
+                    </div>
+                </div>
             </div>
             <div class="product-info">
                 <h3>Grifo</h3>
@@ -184,7 +202,15 @@
         <div class="product-card">
             <div class="product-image">
                 <span class="badge badge-new">New</span>
-                <img src="muggo.jpg" alt="Muggo">
+                <img src="images/muggo.png" alt="Muggo">
+                <div class="product-overlay">
+                    <button class="btn-add">Add to cart</button>
+                    <div class="overlay-actions">
+                        <span class="action-item"><i class="fa-solid fa-share-nodes"></i> Share</span>
+                        <span class="action-item"><i class="fa-solid fa-right-left"></i> Compare</span>
+                        <span class="action-item"><i class="fa-regular fa-heart"></i> Like</span>
+                    </div>
+                </div>
             </div>
             <div class="product-info">
                 <h3>Muggo</h3>
@@ -198,7 +224,15 @@
         <div class="product-card">
             <div class="product-image">
                 <span class="badge badge-discount">-50%</span>
-                <img src="pingky.jpg" alt="Pingky">
+                <img src="images/pingky.jpg" alt="Pingky">
+                <div class="product-overlay">
+                    <button class="btn-add">Add to cart</button>
+                    <div class="overlay-actions">
+                        <span class="action-item"><i class="fa-solid fa-share-nodes"></i> Share</span>
+                        <span class="action-item"><i class="fa-solid fa-right-left"></i> Compare</span>
+                        <span class="action-item"><i class="fa-regular fa-heart"></i> Like</span>
+                    </div>
+                </div>
             </div>
             <div class="product-info">
                 <h3>Pingky</h3>
@@ -213,7 +247,15 @@
         <div class="product-card">
             <div class="product-image">
                 <span class="badge badge-new">New</span>
-                <img src="potty.jpg" alt="Potty">
+                <img src="images/potty.jpg" alt="Potty">
+                <div class="product-overlay">
+                    <button class="btn-add">Add to cart</button>
+                    <div class="overlay-actions">
+                        <span class="action-item"><i class="fa-solid fa-share-nodes"></i> Share</span>
+                        <span class="action-item"><i class="fa-solid fa-right-left"></i> Compare</span>
+                        <span class="action-item"><i class="fa-regular fa-heart"></i> Like</span>
+                    </div>
+                </div>
             </div>
             <div class="product-info">
                 <h3>Potty</h3>
@@ -223,11 +265,128 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="show-more-container">
         <button class="btn-show-more">Show More</button>
     </div>
 </section>
+<section class="inspiration">
+    <input type="radio" name="slider" id="s1" checked>
+    <input type="radio" name="slider" id="s2">
+    <input type="radio" name="slider" id="s3">
+
+    <div class="inspiration-container">
+        <div class="inspiration-text">
+            <h2>50+ Beautiful rooms inspiration</h2>
+            <p>Our designer already made a lot of beautiful prototype of rooms that inspire you</p>
+            <button class="btn-explore">Explore More</button>
+        </div>
+
+        <div class="slider-window">
+            <div class="slider-track">
+                
+                <div class="slide s1">
+                    <img src="images/room1.png" alt="Inner Peace">
+                    <div class="slide-label">
+                        <div class="label-content">
+                            <span>01 —— Bed Room</span>
+                            <h3>Inner Peace</h3>
+                        </div>
+                        <div class="label-arrow">→</div>
+                    </div>
+                    <label for="s2" class="next-arrow">></label>
+                </div>
+
+                <div class="slide s2">
+                    <img src="images/room2.png" alt="Dining Room">
+                    <label for="s3" class="next-arrow">></label>
+                </div>
+
+                <div class="slide s3">
+                    <img src="images/room3.png" alt="Living Room">
+                    <label for="s1" class="next-arrow">></label>
+                </div>
+
+                
+
+            </div>
+
+            <div class="dots-container">
+                <label for="s1" class="dot" id="dot1"></label>
+                <label for="s2" class="dot" id="dot2"></label>
+                <label for="s3" class="dot" id="dot3"></label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="share-setup">
+    <div class="setup-header">
+        <p>Share your setup with</p>
+        <h2>#FuniroFurniture</h2>
+    </div>
+
+    <div class="setup-gallery">
+        <div class="gallery-item item-1"><img src="images/i (5).png" alt="Shelf"></div>
+        <div class="gallery-item item-2"><img src="images/i (10).png" alt="Laptop Desk"></div>
+        <div class="gallery-item item-3"><img src="images/i (7).png" alt="Vintage Chair"></div>
+        <div class="gallery-item item-4"><img src="images/i (2).png" alt="Vases on stools"></div>
+
+        <div class="gallery-item item-5"><img src="images/i (9).png" alt="Dining Room"></div>
+
+        <div class="gallery-item item-6"><img src="images/i (4).png" alt="Bedroom"></div>
+        <div class="gallery-item item-7"><img src="images/i (3).png" alt="Frame and vase"></div>
+        <div class="gallery-item item-8"><img src="images/i (6).png" alt="Dining Table close up"></div>
+        <div class="gallery-item item-9"><img src="images/i (1).png" alt="Kitchen setup"></div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col company-info">
+                <h2 class="footer-logo">Funiro.</h2>
+                <address>
+                    400 University Drive Suite 200 Coral<br>
+                    Gables,<br>
+                    FL 33134 USA
+                </address>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Help</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter Your Email Address" required>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>2023 furino. All rights reserved</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
