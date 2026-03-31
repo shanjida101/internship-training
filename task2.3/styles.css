@@ -270,6 +270,11 @@ body {
 .products {
     padding: 50px 8%;
     text-align: center;
+    max-width: 1700px;          /* Fixed overall width */
+    min-width: 1200px;          /* ← Very important for zoom out */
+    margin: 60px auto;
+    
+
 }
 
 .section-title {
@@ -281,7 +286,7 @@ body {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-bottom: 40px;
 }
@@ -436,6 +441,7 @@ body {
 .inspiration-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 40px;
 }
 
@@ -748,9 +754,12 @@ input[name="slider"] { display: none; }
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(10, 50px); /* Small rows for fine control */
-    gap: 16px;
-    max-width: 1440px;
-    margin: 0 auto;
+    gap: 10px; 
+    margin: 0 auto;       
+    min-width: 1200px;      
+    max-width: 2000px;
+    
+        
 }
 
 .gallery-item img {
@@ -758,6 +767,7 @@ input[name="slider"] { display: none; }
     height: 100%;
     object-fit: cover; /* Ensures images fill their grid area without distortion */
     display: block;
+    
 }
 
 /* --- Specific Positioning --- */
