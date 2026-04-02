@@ -217,8 +217,6 @@ body {
   
 }
 .image-box {
-    
-    
     max-width: 800px;
 }
 
@@ -254,49 +252,40 @@ body {
 }
 
 .about-section {
-  width: 100%;
-    max-width: 1300px;     /* change this to your desired max width, e.g. 1000px, 1400px */
-    margin: 0 auto;        /* centers the content */
-      
-    
+    width: 100%;
+    max-width: 1300px;  
+     min-width: 1300px; 
+    margin: 0 auto;
+    padding: 0 20px;    
+           
 }
 
 
 .about-container {
     margin: 0 auto;
-    padding: 100px 0px;
-    
+    padding: 100px 50px;
     display: flex;
+    padding-left: 150px;
+    padding-right: 150px;
     gap: 60px;
     position: relative;
 }
 
-/* Image Styling with Floating Card */
+
 .about-images {
     flex: 1;
-    display: flex; /* Ensures inner children also use flex logic */
+    display: flex;
 }
 
 .main-image-wrapper {
-
-  
   position: relative;
     width: 100%;
-    
-    
     height: 100%;
 }
 
 .about-main-img {
    width: 100%;
-    height: 100%; /* Spans the full height of the wrapper */
-    
-    /* 7. CRITICAL: This is the magic property. It crops the image 
-       to fit the space without stretching or distorting it. 
-       It will look just like your original burger photo, but with 
-       a perfect height to match the text.
-    */
-    
+    height: 100%; 
     display: block;
 
 
@@ -306,9 +295,9 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
+    padding: 10px;
     background: #fff;
-    
-    border-radius: 15px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -326,18 +315,30 @@ body {
     font-weight: 700;
 }
 .side-floating-img {
-    position: absolute;
-    
-    /* This anchors the container to the literal 0-pixel mark on the right */
-    right: 0; 
-    top: 80%; 
-    transform: translateY(-110%) translateX(120%) rotate(-40deg);
-    
-    width: 500px; /* Adjust size as needed */
-    z-index: 1;
+    /* Adjust size as needed */
+    z-index: 100;
 
+       transform:translateY(-30%) translateX(30%) rotate(40deg);
+     width: 400px;
+position: absolute;
     pointer-events: none; /* Allows clicks to pass through to buttons underneath */
 }
+.side-floating-img2 {
+  /* Adjust size as needed */
+    z-index: 100;
+    right: 0;
+    
+    top: 55%;
+       transform:translateY(-20%) translateX(30%) rotate(40deg);
+     width: 400px;
+position: absolute;
+    pointer-events: none; /* Allows clicks to pass through to buttons underneath */
+}
+.side-floating-img2 img {
+    width: 100%;
+}
+
+
 
 .side-floating-img img {
     width: 100%;
@@ -414,6 +415,9 @@ body {
 .features-grid {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+   padding-left: 150px;
+    padding-right: 150px;
     margin-bottom: 60px;
 }
 
@@ -497,25 +501,7 @@ body {
     gap: 15px;
 }
 
-.arrow-btn {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: none;
-    background: #fff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    transition: 0.3s;
-}
 
-.arrow-btn.active, .arrow-btn:hover {
-    color: #BD1F17;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
 
 /* Food Cards Grid */
 .food-grid {
@@ -742,10 +728,21 @@ input:focus, textarea:focus {
     border-color: #ffb400; /* Subtle highlight on click */
 }
 
-/* --- TESTIMONIAL SECTION --- */
-.testimonial-section { padding: 80px 10%; background: #fff; position: relative; }
+.testimonial-section { 
+    padding: 20px 10%; 
+    background: #fff; 
+    position: relative;
+ }
+.pos{
+     padding: 100px 10%; 
+    background: #fff; 
 
-.header-row { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; }
+}
+.header-row { display: flex; 
+    justify-content: space-between; 
+    align-items: flex-end; 
+    margin-bottom: 40px; 
+}
 
 .sub-title { color: #e63946; font-weight: bold; font-size: 14px; display: block; margin-bottom: 10px; }
 .sub-title::before { content: "■ "; }
@@ -754,24 +751,83 @@ input:focus, textarea:focus {
 .arrow { 
     width: 40px; height: 40px; border-radius: 50%; border: 1px solid #ddd; 
     background: #fff; cursor: pointer; margin-left: 10px; 
+    
 }
-.arrow.next { color: #e63946; }
-
-.testimonial-card { display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; min-height: 400px; }
+.arrow.next { color: #e63946;
+            box-shadow: 10px 20px 40px rgba(82, 81, 81, 0.1); }
+.arrow.prev { color: #333;
+  box-shadow: 10px 20px 40px rgba(82, 81, 81, 0.1); }
+.testimonial-card {
+    display: flex;
+    width: 100%;
+    min-height: 450px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+ }
 
 .testimonial-text { 
-    background: #ffb400; width: 40%; padding: 60px; position: relative; 
-    display: flex; flex-direction: column; justify-content: center;
+    background: #ffb400; /* The signature Yellow */
+    width: 45%;
+    padding: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    font-family: 'Roboto';
+    font-size: 20px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    font-weight: 45;
 }
 
-.quote-mark { font-size: 40px; position: absolute; top: 40px; left: 40px; opacity: 0.3; }
+.flower-decoration {
+    position: absolute;
+    bottom: 20px;
+    left: 1px;
+    width: 50px;
+    opacity: 0.9;
+    color: #000;
+}
+.quote-mark { 
+    font-size: 30px; 
+    position: absolute; 
+    top: 90px; 
+    left: 40px;
+    font-family: serif;
+    font-weight: bold;
+ }
+
 
 .user-info { 
-    margin-top: 30px; display: flex; justify-content: space-between; 
-    align-items: center; border-bottom: 2px solid #333; padding-bottom: 10px;
+    margin-top: 30px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 2px solid #333; 
+    
 }
+.user-info h4 { font-family: Bebas Neue;
+font-weight: 200;
+font-size: 18px;
+letter-spacing: 0px;
+margin-top: 100px;
+}
+.user-info p { font-family: Bebas Neue;
+font-family: Roboto;
+font-weight: 100;
+opacity: 0.8;
+font-size: 14px;
 
-.user-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+margin-top: -20px;
+}
+.user-avatar { 
+    margin-top: 70px;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    object-fit: cover; }
 
 .testimonial-image { width: 60%; position: relative; }
 .testimonial-image img { width: 100%; height: 100%; object-fit: cover; }
