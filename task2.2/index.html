@@ -18,6 +18,8 @@
                     <h1>Restau<span class="rant">rant</span></h1>
                 </div>
                 </div>
+
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox"> <label for="menu-toggle" class="hamburger">&#9776;</label>
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -54,8 +56,12 @@
             </div>
         </div>
     </section>
-<section class="about-section">
 
+
+<section class="about-section">
+<div class="side-floating-img">
+<img src="veggie-bowl.png" alt="Vegetables">
+ </div>
     <div class="about-container">
         <div class="about-images">
             <div class="main-image-wrapper">
@@ -115,84 +121,91 @@
                 <p>Grab your food order</p>
             </div>
         </div>
-    
-    </div>
- <div class="side-floating-img">
-        <img src="veggie-bowl.png" alt="Vegetables">
     </div>
 </section>
 
 <section class="popular-section">
-    <img src="veggie-bowl.png" class="side-pepper" alt="">
+     <img src="veggie-bowl.png" class="side-pepper" alt="">
+    <input type="radio" name="food-slider" id="item-1" checked hidden>
+    <input type="radio" name="food-slider" id="item-2" hidden>
+    <input type="radio" name="food-slider" id="item-3" hidden>
+    <input type="radio" name="food-slider" id="item-4" hidden>
 
     <div class="popular-container">
         <div class="popular-header">
             <div class="title-group">
                 <div class="sub-title">
-                    <span class="red-square"></span>
-                    Crispy, Every Bite Taste
+                    <span class="red-square"></span> Crispy, Every Bite Taste
                 </div>
                 <h2 class="main-title">POPULAR FOOD ITEMS</h2>
             </div>
-            
-              <div class="slider-controls">
+            <div class="slider-controls1">
             <button class="arrow prev">&#10094;</button>
             <button class="arrow next">&#10095;</button>
         </div>
-        </div>
+            </div>
 
         <div class="food-grid">
-            <div class="food-card">
-                <div class="food-img-wrapper">
-                    <img src="burger-item.jpg" alt="Vegetables Burger">
-                </div>
+            <div class="food-card card-1">
+                <div class="food-img-wrapper"><img src="burger-item.jpg" alt="Burger"></div>
                 <div class="food-content">
                     <div class="red-line"></div>
                     <h3>VEGETABLES BURGER</h3>
                     <p>Barbecue Italian cuisine pizza</p>
                 </div>
+                <div class="slider-controls">
+                    <label for="item-4" class="arrow prev">&#10094;</label>
+                    <label for="item-2" class="arrow next">&#10095;</label>
+                </div>
             </div>
 
-            <div class="food-card">
-                <div class="food-img-wrapper">
-                    <img src="pizza.png" alt="Spacial Pizza">
-                </div>
+            <div class="food-card card-2">
+                <div class="food-img-wrapper"><img src="pizza.png" alt="Pizza"></div>
                 <div class="food-content">
                     <div class="red-line"></div>
                     <h3>SPACIAL PIZZA</h3>
                     <p>Barbecue Italian cuisine pizza</p>
                 </div>
+                <div class="slider-controls">
+                    <label for="item-1" class="arrow prev">&#10094;</label>
+                    <label for="item-3" class="arrow next">&#10095;</label>
+                </div>
             </div>
 
-            <div class="food-card">
-                <div class="food-img-wrapper">
-                    <img src="french.jpg" alt="French Fries">
-                </div>
+            <div class="food-card card-3">
+                <div class="food-img-wrapper"><img src="french.jpg" alt="Fries"></div>
                 <div class="food-content">
                     <div class="red-line"></div>
                     <h3>SPACIAL FRENCH FRIES</h3>
                     <p>Barbecue Italian cuisine</p>
                 </div>
+                <div class="slider-controls">
+                    <label for="item-2" class="arrow prev">&#10094;</label>
+                    <label for="item-4" class="arrow next">&#10095;</label>
+                </div>
             </div>
 
-            <div class="food-card">
-                <div class="food-img-wrapper">
-                    <img src="chicken-item.jpg" alt="Cuisine Chicken">
-                </div>
+            <div class="food-card card-4">
+                <div class="food-img-wrapper"><img src="chicken-item.jpg" alt="Chicken"></div>
                 <div class="food-content">
                     <div class="red-line"></div>
                     <h3>CUISINE CHICKEN</h3>
                     <p>Japanese Cuisine Chicken</p>
                 </div>
+                <div class="slider-controls">
+                    <label for="item-3" class="arrow prev">&#10094;</label>
+                    <label for="item-1" class="arrow next">&#10095;</label>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 <section class="booking-section">
     <div class="container">
         <div class="booking-content">
             <span class="sub-title">Book Now</span>
-            <h2 class="main-title">BOOK YOUR TABLE</h2>
+            <h2 class="main-title1">BOOK YOUR TABLE</h2>
             <p class="des">
                 Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo 
                 molestie vel, ornare non id blandit netus.
@@ -218,8 +231,10 @@
         </div>
     </div>
 </section>
+
+
 <section class="testimonial-section">
-<img src="13.png" class="side-pepper" alt="">
+<img src="13.png" class="side-pepper2" alt="">
 <div class="pos">
     <div class="header-row">
         <div class="titles">
@@ -227,10 +242,11 @@
             <h2 class="main-title">WHAT SOME OF MY CUSTOMERS SAY</h2>
         </div>
     
-        <div class="slider-controls">
+        <div class="slider-controls1">
             <button class="arrow prev">&#10094;</button>
             <button class="arrow next">&#10095;</button>
         </div>
+        
     </div>
 
     <div class="testimonial-card">
@@ -245,7 +261,7 @@
             </div>
            <div class="border-accent"></div>
     <div class="flower-decoration">
-            <img src="Vector (Stroke).svg" alt="decoration">
+            <img src="Group.svg" alt="decoration">
            </div>
         </div>
         
@@ -257,9 +273,14 @@
         
     </div>
 </div>
-   <div class="side-floating-img2">
-        <img src="12.png" alt="Vegetables">
+
+<div class="side-floating-img2">
+<img src="12.png" alt="Vegetables">
 </div> 
+<div class="slider-controls">
+            <button class="arrow prev">&#10094;</button>
+            <button class="arrow next">&#10095;</button>
+        </div>
 </section>
 
 <footer class="contact-footer">
@@ -267,22 +288,22 @@
     
     <div class="contact-grid">
         <div class="contact-item">
-            <div class="icon">🕒</div>
+            <div class="icon"><img src="Vector (1).png" alt=""></div>
             <h3>OPENING HOURS</h3>
             <p>Monday - Sunday<br>9:00 AM to 11:30 PM</p>
         </div>
         <div class="contact-item">
-            <div class="icon">📞</div>
+            <div class="icon"><img src="Vector (2).png" alt=""></div>
             <h3>LET'S TALK</h3>
             <p>Phone: 1-800-222-4545<br>Fax: 1-800-222-4545</p>
         </div>
         <div class="contact-item">
-            <div class="icon">✉️</div>
+            <div class="icon"><img src="mail.png" alt=""></div>
             <h3>BOOK A TABLE</h3>
             <p>Email: demo@website.com<br>Support: support@website.com</p>
         </div>
         <div class="contact-item">
-            <div class="icon">📍</div>
+            <div class="icon"><img src="Vector (3).png" alt=""></div>
             <h3>OUR ADDRESS</h3>
             <p>123 Street New York City, United States Of America.</p>
         </div>
@@ -292,7 +313,7 @@
         <div class="social-links">
             <a href="#">f</a><a href="#">t</a><a href="#">in</a><a href="#">ig</a>
         </div>
-        <p>© 2023 All Rights Reserved.</p>
+        <p>© 2026 All Rights Reserved.</p>
     </div>
 </footer>
 </body>
