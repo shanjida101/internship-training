@@ -812,14 +812,14 @@ margin-top: -20px;
 }
 
 .contact-grid { 
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 60px; 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 60px; margin-top: 40px; font-family: Roboto;
 }
 
 .contact-item h3 { font-size: 16px; color: #ffb400; margin: 15px 0; }
 .contact-item p { font-size: 13px; line-height: 1.6; color: #ccc; }
 .contact-item .icon { font-size: 24px; color: #ffb400; }
 
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;border-top: none; }
 
 .social-links { margin-bottom: 20px; }
 .social-links a { 
@@ -828,7 +828,7 @@ margin-top: -20px;
     align-items: center; justify-content: center; font-size: 14px;
 }
 
-.footer-bottom p { font-size: 12px; color: #777; }
+.footer-bottom p { font-size: 12px; color: white; font-family: Roboto;}
 .menu-checkbox { display: none; }
 
 .hamburger {
@@ -1495,7 +1495,7 @@ input[hidden] {
         display: flex;
         flex-direction: column;
         gap: 40px; /* Spacing between contact blocks */
-    
+        margin-bottom: 60px;
     }
 
     /* 4. Individual Contact Items */
@@ -1508,13 +1508,15 @@ input[hidden] {
     .contact-item .icon {
         font-size: 30px;
         color: #ffb400; /* Gold/Yellow icon */
+        margin-bottom: 15px;
     }
 
     .contact-item h3 {
         font-family: 'Bebas Neue', sans-serif;
         font-size: 24px;
         letter-spacing: 1px;
-        color: #fff; 
+        color: #fff; /* Title white like SS */
+        margin-bottom: 10px;
     }
 
     .contact-item p {
@@ -1527,13 +1529,14 @@ input[hidden] {
     /* 5. Bottom Socials & Copyright */
     .footer-bottom {
         border-top: none; /* Removed line to match your clean SS look */
-
+        padding-top: 20px;
     }
 
     .social-links {
         display: flex;
         justify-content: center;
         
+
     }
 
     .social-links a {
