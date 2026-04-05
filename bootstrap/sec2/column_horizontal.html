@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <style>
+        .h-10{
+            height: 10rem;
+        }
+    </style>
+</head>
+<body>
+
+<h1>justify-content-* Classes
+These classes control how the columns are horizontally aligned inside the row when there is extra space.</h1>
+<p>
+    <ul>
+        <li>justify-content-start → Aligns columns to the left of the row.</li>
+        <li>justify-content-end → Aligns columns to the right of the row.</li>
+        <li>justify-content-center → Aligns columns in the center of the row.</li>
+        <li>justify-content-around → Distributes columns evenly with equal space around them.
+            Equal space around each column (including half-space at the very left and right).
+            The columns look more “spread out” with padding on the sides.
+        </li>
+        <li>justify-content-between → Distributes columns evenly with equal space between them.</li>
+        <li>justify-content-evenly → Distributes columns evenly with equal space around them.Equal space between all columns and on the outer sides.
+This usually looks the most balanced and evenly distributed.</li>
+    </ul>
+</p>
+
+<div class="container">
+    <div class="row h-10 bg-warning justify-content-start mb-3">
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns start
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns
+            </div>
+        </div>
+    </div>
+
+    <div class="row h-10 bg-warning justify-content-center mb-3">
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns center
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns
+            </div>
+        </div>
+    </div>
+
+    <div class="row h-10 bg-warning justify-content-end mb-3">
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns end
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns
+            </div>
+        </div>
+    </div>
+
+    <div class="row h-10 bg-warning justify-content-around mb-3">
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns around
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns
+            </div>
+        </div>
+    </div>
+
+    <div class="row h-10 bg-warning justify-content-between mb-3">
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns between
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns
+            </div>
+        </div>
+    </div>
+
+    <div class="row h-10 bg-warning justify-content-evenly mb-3">
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns evenly
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="bg-primary p-3 text-white mb-3">
+                Columns
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
