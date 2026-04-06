@@ -40,7 +40,7 @@ body {
 
 .hero-wrapper {
   position: relative;
-    min-height: 760px;
+    min-height: 770px;
     width: 100%;
     min-width: 1200px;
     background-color: #BD1F17;
@@ -62,7 +62,7 @@ body {
     width: 1320px;
     max-width: 1320px;
     min-width: 1320px;
-    margin: 0 auto;
+   margin-top:10px;
     padding-top: 140px;
     display: flex;
     align-items: center;
