@@ -11,7 +11,7 @@ body {
 }
 .nav-container {
     max-width: 1200px;
-    min-width: 1160px; /* FIX: prevents navbar collapse on zoom out */
+    min-width: 1160px; 
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
@@ -40,7 +40,7 @@ body {
 
 .hero-wrapper {
   position: relative;
-    min-height: 930px;
+    min-height: 760px;
     width: 100%;
     min-width: 1200px;
     background-color: #BD1F17;
@@ -63,7 +63,7 @@ body {
     max-width: 1320px;
     min-width: 1320px;
     margin: 0 auto;
-    padding-top: 170px;
+    padding-top: 140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
