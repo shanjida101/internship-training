@@ -1,8 +1,6 @@
 html, body {
     margin: 0;
     padding: 0;
-            /* or min-width if needed */
-        /* important: prevents going beyond viewport */
     overflow-x: hidden;    /* hides any accidental horizontal overflow */
     box-sizing: border-box;
 }
@@ -11,28 +9,27 @@ body {
     font-family:  'Bebas Neue','Roboto', sans-serif;
     
 }
-
 .nav-container {
     max-width: 1200px;
+    min-width: 1160px; /* FIX: prevents navbar collapse on zoom out */
     margin: 0 auto;
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: center;
     padding: 0 20px;
+    box-sizing: border-box;
 }
+
 .nav-links {
     display: flex;
     list-style: none;
     gap: 25px;
-    margin-left: 60px; 
-  
-    margin-right: 0; 
+    margin-left: 60px;
+    margin-right: 0;
 }
 
 .btn-book {
-    /* Push the "Book a Table" button to the far right */
-    margin-left: auto; 
-    
+    margin-left: auto;
     background-color: #febd2d;
     color: #000;
     padding: 10px 20px;
@@ -42,39 +39,40 @@ body {
 }
 
 .hero-wrapper {
-    position: relative;
-    min-height: 95vh;
+  position: relative;
+    min-height: 930px;
     width: 100%;
-    background-color: #BD1F17; 
+    min-width: 1200px;
+    background-color: #BD1F17;
+    background-image: linear-gradient(rgba(189, 31, 23, 0.9), rgba(189, 31, 23, 0.9)), url('banner.png');
+    background-repeat: no-repeat, repeat;
+    background-size: auto, 100px 100px;
+    background-position: center, top left;
+    background-attachment: scroll, fixed;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     z-index: 1;
-    
-    overflow: hidden; 
+    overflow-x: auto;
+    overflow-y: hidden;
+   
 }
 
-/* Pattern overlay */
-.hero-wrapper::before {
-    content: "";
-    position: absolute;
-    /* Instead of inset: 0, we can tie it to the viewport or fix it */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    background-image: url('banner.png');
-    background-repeat: repeat;
-    
-    /* FIX: This ensures the pattern stays the same scale regardless of zoom */
-    background-size: 100px 100px; 
-    background-attachment: fixed; 
-    
-    opacity: 0.1;
-    z-index: 1;
-    pointer-events: none;
+.hero-container {
+    width: 1320px;
+    max-width: 1320px;
+    min-width: 1320px;
+    margin: 0 auto;
+    padding-top: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
 }
-/* Keep content above */
+
 .navbar,
 .hero-container {
     position: relative;
@@ -86,19 +84,25 @@ body {
     color: #fff;
     font-weight: 600;
     padding-bottom: 0.5rem;
+}
 
-    span {
-        font-size: 1.9rem;
-        font-weight: 400;
-    }
+.logo-name span {
+    font-size: 1.9rem;
+    font-weight: 400;
 }
 
 .navbar {
     padding: 20px 0;
-     
     backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    box-sizing: border-box;
 }
-
 
 .logo-area {
     display: flex;
@@ -111,85 +115,63 @@ body {
 .nav-links a {
     color: white;
     text-decoration: none;
-   
-     font-size: 1.1rem;
+    font-size: 1.1rem;
     font-weight: 500;
-
     font-family: 'Raleway';
 }
 
 .btn-book {
-    background-color: #febd2d; /* Yellow */
+    background-color: #FEBD2D;
     color: #000;
-    padding: 10px 20px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 13px;
+    font-weight: 500;
+    font-size: 17px;
+    transition: transform 0.2s;
+    position: relative;
 }
 
-/* Hero Body */
-.hero-container {
-    max-width: 1200px;
-    margin: 40px auto 0; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    
-}
 
 
 .content-left {
-   
     z-index: 20;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-   gap: 30px;
-   
+    gap: 30px;
 }
-/* This creates the overlapping red panel */
-.text-box  {
-    background: linear-gradient(90deg, rgba(189, 31, 23, 0) 32%, rgba(189, 31, 23, 0.7) 100%);
-    padding: 0px  40px 0px;
-    position: relative;
-    left: 90px;  /* pushes into image */
-    width: max-content;
-  
-    margin-right: -120px; 
-    line-height:70px;
-    
-    letter-spacing: 0%;
-   font-family: 'Bebas Neue';
-  
-   color: #FFFFFF;
 
-}
-.description{
-  
+.text-box {
+    background: linear-gradient(90deg, rgba(189, 31, 23, 0) 32%, rgba(189, 31, 23, 0.7) 100%);
+    padding: 0px 40px 0px;
     position: relative;
-    left: 140px;  /* pushes into image */
-    
+    left: 90px;
+    width: max-content;
+    margin-right: -120px;
+    line-height: 70px;
+    letter-spacing: 0%;
+    font-family: 'Bebas Neue';
+    color: #FFFFFF;
+}
+
+.description {
+    position: relative;
+    left: 140px;
     font-family: 'Roboto';
     margin-top: -70px;
     display: inline-block;
-    position: relative;
     color: white;
     line-height: 1.6;
     max-width: 380px;
-
-
-
 }
+
 .main-heading {
     font-family: 'Bebas Neue', sans-serif;
-    font-size:75px;
+    font-size: 75px;
     letter-spacing: 0.5px;
 }
 
-
-.btn-explore  {
-   background-color: #FEBD2D;
+.btn-explore {
+    background-color: #FEBD2D;
     color: #000;
     margin-top: -20px;
     padding: 10px 30px;
@@ -200,49 +182,35 @@ body {
     position: relative;
     left: 140px;
 }
-.btn-book{
-  background-color: #FEBD2D;
-    color: #000;
-  
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 17px;
-    transition: transform 0.2s;
-    position: relative;
+
+.content-right {
+    z-index: 1;
 }
 
-/* Image Side */
-.content-right {
-   
-     z-index: 1;
-  
-}
 .image-box {
     max-width: 800px;
+    position: relative; /* FIX: anchors the badge and star to the image box */
 }
 
+.main-dish {
+    width: 100%;
+    max-width: 100%; /* FIX: prevents image overflow */
+    height: auto;
+    display: block;
+}
 
 .badge-container {
     position: absolute;
-    /* Bottom and Right move it relative to the corner of the image */
-    bottom: -35px; 
+    bottom: -35px;
     right: -35px;
-    
-    width: 130px; 
+    width: 130px;
     height: 130px;
-    z-index: 50; /* Ensure it's higher than the image z-index */
+    z-index: 50;
 }
 
 .offer-badge {
     width: 100%;
     height: auto;
-
-    
-}
-.main-dish {
-    width: 100%;
-    display: block;
-    
 }
 
 .star-icon {
@@ -251,7 +219,6 @@ body {
     right: -20px;
     width: 35px;
 }
-
 .about-section {
      padding: 20px 10%; 
     background: #fff; 
@@ -880,6 +847,9 @@ margin-top: -20px;
     }
 
     .nav-container {
+        width: auto;
+        max-width: none;
+        min-width: 0;
         justify-content: space-between;
     }
 
@@ -908,6 +878,9 @@ margin-top: -20px;
     }
     /* HERO LAYOUT */
     .hero-container {
+        width: auto;
+        max-width: none;
+        min-width: 0;
         flex-direction: column;
         align-items: flex-start;
         margin: 12px;
@@ -950,10 +923,12 @@ margin-top: -20px;
 
     /* IMAGE */
     .content-right {
+        flex: 0 1 auto;
         width: 100%;
     }
 
     .image-box {
+        max-width: none;
         width: 100%;
         position: relative;
     }
