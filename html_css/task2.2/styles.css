@@ -42,7 +42,6 @@ body {
   position: relative;
     min-height: 770px;
     width: 100%;
-    min-width: 1200px;
     background-color: #BD1F17;
     background-image: linear-gradient(rgba(189, 31, 23, 0.9), rgba(189, 31, 23, 0.9)), url('banner.png');
     background-repeat: no-repeat, repeat;
@@ -53,16 +52,16 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     z-index: 1;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
    
 }
 
 .hero-container {
-    width: 1320px;
+    width: min(1320px, calc(100% - 40px));
     max-width: 1320px;
-    min-width: 1320px;
-   margin-top:10px;
+    min-width: 0;
+    margin: 10px auto 0;
     padding-top: 140px;
     display: flex;
     align-items: center;
