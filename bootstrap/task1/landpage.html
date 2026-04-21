@@ -665,32 +665,48 @@
 
 /* Consistent styling for placeholders and icons in inputs */
 .custom-input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: white;
 }
 
 .custom-input::-webkit-calendar-picker-indicator {
   /* Making sure date/time icons are also white */
   opacity: 0;
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
+  pointer-events: none;
 }
 
 input[type="date"].custom-input {
-  background-image: url("./images/Frame (6).png");
-  background-repeat: no-repeat;
-  background-position: right 18px center;
-  background-size: 18px 18px;
   padding-right: 3.2rem;
+}
+
+.date-input-wrap {
+  position: relative;
+}
+
+.date-input-trigger {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  background: transparent url("./images/Frame (6).png") center center / 18px 18px no-repeat;
+  z-index: 2;
 }
 
 /* Select arrow styling */
 select.custom-input {
-  appearance: none;
+
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 16px 12px;
+}
+
+select.custom-input option {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
 }
 
 /* Focusing effect to match the accent */
@@ -700,9 +716,8 @@ select.custom-input {
   border-color: var(--accent-peach) !important;
 }
 
-/* 3. Icon and Text Row Fixes */
 .contact-icon-row i {
-  /* Correct color for the phone/geo icons */
+
   color: var(--text-muted);
   font-size: 1.1rem;
 }
@@ -714,18 +729,16 @@ select.custom-input {
   color: var(--text-muted);
 }
 
-/* 4. 'Book Now' Button - Full width and height */
 .btn-book {
   background-color: var(--accent-peach) !important;
   color: var(--text-primary) !important;
   border: none;
-  /* Full height of the inputs */
   height: 54px;
   width: 100%;
   font-weight: 700;
   border-radius: 8px;
   font-size: 1rem;
-  margin-top: 1.5rem; /* Precise spacing above the button */
+  margin-top: 1.5rem; 
   transition: all 0.3s ease;
 }
 
@@ -1467,7 +1480,7 @@ select.custom-input {
     <div class="row align-items-center g-5">
       <div class="col-lg-5">
         <h2 class="fw-bold mb-4">Contact With Us</h2>
-        <p class="text-light-emphasis mb-4">
+        <p class="text-light mb-4">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
         </p>
         <div class="d-flex align-items-center mb-3">
@@ -1483,22 +1496,25 @@ select.custom-input {
       <div class="col-lg-7">
         <form id="appointmentForm" class="row g-3">
           <div class="col-md-6">
-            <input type="text" name="name" class="form-control custom-input" placeholder="Name" required>
+            <input type="text" name="name" class="form-control custom-input text-white" placeholder="Name" required>
           </div>
           <div class="col-md-6">
-            <input type="email" name="email" class="form-control custom-input" placeholder="Email" required>
+            <input type="email" name="email" class="form-control custom-input text-white" placeholder="Email " required>
           </div>
           <div class="col-md-6">
-            <input type="text" name="mobileNumber" class="form-control custom-input" placeholder="Mobile Number" required>
+            <input type="text" name="mobileNumber" class="form-control custom-input text-white" placeholder="Mobile Number" required>
           </div>
           <div class="col-md-6">
-            <input type="text" name="doctorName" class="form-control custom-input" placeholder="Doctor Name" required>
+            <input type="text" name="doctorName" class="form-control custom-input text-white" placeholder="Doctor Name" required>
           </div>
           <div class="col-md-6">
-            <input type="date" name="appointmentDate" class="form-control custom-input" required>
+            <div class="date-input-wrap">
+              <input id="appointmentDate" type="date" name="appointmentDate" class="form-control custom-input text-white" required>
+              <button type="button" id="appointmentDateTrigger" class="date-input-trigger" aria-label="Open calendar"></button>
+            </div>
           </div>
           <div class="col-md-6">
-            <select name="appointmentTime" class="form-select custom-input" required>
+            <select name="appointmentTime" class="form-select custom-input bg-primary text-white" required>
               <option value="" selected disabled>Time</option>
               <option value="10:00 AM">10:00 AM</option>
               <option value="11:00 AM">11:00 AM</option>
@@ -1576,8 +1592,33 @@ select.custom-input {
 
     <script>
       const appointmentForm = document.getElementById("appointmentForm");
+      const appointmentDateInput = document.getElementById("appointmentDate");
+      const appointmentDateTrigger = document.getElementById("appointmentDateTrigger");
       const appointmentStatus = document.getElementById("appointmentStatus");
       const appointmentSubmitBtn = document.getElementById("appointmentSubmitBtn");
+
+      if (appointmentDateInput && appointmentDateTrigger) {
+        const openAppointmentDatePicker = () => {
+          if (typeof appointmentDateInput.showPicker === "function") {
+            appointmentDateInput.showPicker();
+            return;
+          }
+
+          appointmentDateInput.focus();
+          appointmentDateInput.click();
+        };
+
+        appointmentDateTrigger.addEventListener("click", openAppointmentDatePicker);
+
+        appointmentDateInput.addEventListener("pointerdown", (event) => {
+          if (typeof appointmentDateInput.showPicker !== "function") {
+            return;
+          }
+
+          event.preventDefault();
+          openAppointmentDatePicker();
+        });
+      }
 
       if (appointmentForm && appointmentStatus && appointmentSubmitBtn) {
         appointmentForm.addEventListener("submit", async (event) => {
