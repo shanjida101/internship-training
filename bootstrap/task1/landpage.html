@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc House Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+        
+      :root {
+        --page-bg: #073d38;
+        --text-main: #f1f1eb;
+        --text-soft: #dbe7de;
+        --text-muted: #bdd0c8;
+        --accent: #f8a27b;
+        --shape: #194d48;
+        --shape-soft: rgba(255, 255, 255, 0.1);
+      }
+
+      body {
+        margin: 0;
+        font-family: "Outfit", sans-serif;
+        background-color: white;
+      }
+
+      .doc-shell {
+        min-height: 567px;
+        background: var(--page-bg) url("./images/Rectangle 1.png") center center /
+          cover no-repeat;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 16px;
+      }
+
+      .doc-shell::before {
+        content: none;
+      }
+
+      .hero-wrap {
+        position: relative;
+        z-index: 2;
+        min-height: 650px;
+        max-width: 1130px;
+        padding-top: 1rem;
+        padding-bottom: 1.8rem;
+      }
+
+      .hero-wrap::before {
+        content: "";
+        position: absolute;
+        top: 112px;
+        left: 454px;
+        width: 152px;
+        height: 152px;
+        opacity: 0.22;
+        transform: rotate(-2deg);
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .hero-wrap::after {
+        content: "";
+        position: absolute;
+        left: 474px;
+        bottom: 42px;
+        width: 74px;
+        height: 106px;
+        opacity: 0.13;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .navbar {
+        padding-top: 0;
+        padding-bottom: 0.2rem;
+      }
+
+      .navbar-toggler {
+        color: var(--text-main);
+      }
+
+      .navbar-brand img {
+        width: 182px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .navbar-nav {
+        --bs-nav-link-padding-x: 1rem;
+        gap: 0.9rem;
+      }
+
+      .navbar-nav .nav-link {
+        color: var(--text-main);
+        font-size: 1.1rem;
+        font-weight: 400;
+     
+
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link:focus {
+        color: var(--accent);
+      }
+
+      .hero-row {
+        min-height: 477px;
+      }
+
+      .hero-copy {
+        max-width: 29rem;
+        padding-top: 1.5rem;
+        padding-left: 0.1rem;
+        position: relative;
+        z-index: 2;
+      }
+.hero-title {
+  color: var(--text-main);
+  /* Using a slightly larger font-size and tighter line-height for that "Help Center" look */
+  font-size: clamp(2.5rem, 3.5vw, 4.5rem); 
+  line-height: 1.1; 
+  letter-spacing: -0.02em; /* Tightening the letters slightly matches the image better */
+  font-weight: 200;
+  margin-top:1rem;
+}
+
+.hero-text {
+  color: var(--text-soft);
+  max-width: 32rem; /* Increased slightly to allow for better flow */
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+      .hero-btn {
+        background-color: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.82rem;
+        border-radius: 0.5rem;
+        border: 0;
+        padding: 0.92rem 1.45rem;
+        min-width: 110px;
+        box-shadow: none;
+      }
+
+      .hero-btn:hover,
+      .hero-btn:focus {
+        background-color: #f18f64;
+        color: #fff;
+      }
+
+      .hero-art {
+        position: relative;
+        min-height: 392px;
+        z-index: 2;
+      }
+
+      .doctors-visual {
+        position: absolute;
+        top: 12px;
+        right: -2px;
+        width: min(100%, 518px);
+        z-index: 3;
+      }
+
+      .doctors-visual img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+.capsule {
+  position: absolute;
+  z-index: 1; /* Sit behind the text and doctors */
+  pointer-events: none;
+  opacity: 1; /* Matching the subtle Figma look */
+}
+
+/* Big capsule at the top left */
+.cap-top-left {
+  top:-3%;
+  left:0%;
+  width: 300px;
+
+}
+
+/* Medium capsule floating in the center/middle */
+.cap-center {
+  top: 10%;
+  left: 40%;
+  width: 400px;
+  transform: rotate(5deg);
+}
+
+/* Small capsule at the very bottom middle */
+.cap-bottom-mid {
+  bottom: 6%;
+  left:42%;
+  width: 150px;
+   transform: rotate(-225deg);
+
+}
+
+      .services-section {
+        background-color: #ffffff;
+        padding: 6rem 0 5rem;
+      }
+
+      .services-media {
+        border-radius: 0.75rem;
+        overflow: hidden;
+        height: 100%;
+        min-height: 700px;
+      }
+
+      .services-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .services-copy {
+        max-width: 100%;
+        padding-left: 0.35rem;
+      }
+
+      .services-title {
+        color: #111111;
+        font-size: 3rem;
+        line-height: 1.08;
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+      }
+
+      .services-lead,
+      .service-body,
+      .service-body-secondary {
+        color: #5f5f5f;
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      .services-lead {
+        max-width: 32rem;
+        margin-bottom: 1.35rem;
+      }
+
+      .service-toggle-group {
+        display: inline-flex;
+        align-items: center;
+        gap: 0;
+        border: 1px solid #ececec;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        background-color: #ffffff;
+        margin-bottom: 2.25rem;
+      }
+
+      .service-toggle {
+        border-radius: 0;
+        border: 0;
+        color: #3c3c3c;
+        background-color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 1.15rem 1.4rem;
+        box-shadow: none !important;
+      }
+
+      .btn-check:checked + .service-toggle {
+        background-color: var(--accent);
+        color: #1c1c1c;
+      }
+
+      .service-pane {
+        display: none;
+      }
+
+      .service-pane.active {
+        display: block;
+      }
+
+      .service-card-image {
+        border-radius: 0.75rem;
+        overflow: hidden;
+        margin-bottom: 1.2rem;
+      }
+
+      .service-card-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .service-card-title {
+        color: #111111;
+        font-size: 2.2rem;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .service-body {
+        margin-bottom: 1rem;
+      }
+
+      .service-body-secondary {
+        margin-bottom: 2rem;
+      }
+
+      .service-btn {
+        color: var(--accent);
+        border: 1.5px solid var(--accent);
+        background-color: transparent;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0.9rem 1.35rem;
+        border-radius: 0.7rem;
+      }
+
+      .service-btn:hover,
+      .service-btn:focus {
+        background-color: var(--accent);
+        border-color: var(--accent);
+        color: #ffffff;
+      }
+
+      .contact-review-section {
+        background-color: #ffffff;
+        padding: 2.2rem 0 6.2rem;
+      }
+
+      .info-strip {
+        margin-bottom: 5.4rem;
+      }
+
+      .info-card {
+        border-radius: 0.65rem;
+        padding: 2.15rem 2.1rem;
+        height: 100%;
+        color: #ffffff;
+      }
+
+      .info-card-dark {
+        background-color: #073d38;
+      }
+
+      .info-card-accent {
+        background-color: #f8a27b;
+      }
+
+      .info-icon {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.65rem;
+        color: #ffffff;
+        flex-shrink: 0;
+      }
+
+      .info-title {
+        font-size: 1.55rem;
+        line-height: 1.1;
+        font-weight: 700;
+        margin-bottom: 0.45rem;
+      }
+
+      .info-text {
+        font-size: 0.98rem;
+        line-height: 1.5;
+        margin: 0;
+        opacity: 0.98;
+      }
+
+      .review-header {
+        max-width: 41rem;
+        margin: 0 auto 2.9rem;
+        text-align: center;
+      }
+
+      .review-title {
+        color: #111111;
+        font-size: 2.35rem;
+        font-weight: 700;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+      }
+
+      .review-lead {
+        color: #5f5f5f;
+        font-size: 0.92rem;
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      .testimonial-carousel {
+        position: relative;
+        padding: 0 1.25rem;
+      }
+
+      .testimonial-card {
+        border: 1px solid #ebeff3;
+        border-radius: 0.55rem;
+        background-color: #ffffff;
+        padding: 1.75rem 1.95rem 1.6rem;
+        min-height: 205px;
+        height: 100%;
+        box-shadow: none;
+      }
+
+      .testimonial-avatar {
+        width: 2.95rem;
+        height: 2.95rem;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid #f2ab88;
+      }
+
+      .testimonial-name {
+        color: #232323;
+        font-size: 0.98rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.15rem;
+      }
+
+      .testimonial-role {
+        color: #8b8b8b;
+        font-size: 0.78rem;
+        margin: 0;
+      }
+
+      .quote-mark {
+        width: 2.7rem;
+        height: 2.05rem;
+        flex-shrink: 0;
+        margin-top: 0.15rem;
+      }
+
+      .quote-mark img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .testimonial-text {
+        color: #6a6a6a;
+        font-size: 0.78rem;
+        line-height: 1.75;
+        margin: 0;
+        max-width: 24rem;
+      }
+
+      .testimonial-control {
+        width: 3rem;
+        height: 3rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ffffff;
+        border: 1px solid #f3aa88;
+        border-radius: 50%;
+        opacity: 1;
+      }
+
+      .testimonial-control.carousel-control-prev {
+        left: -0.3rem;
+      }
+
+      .testimonial-control.carousel-control-next {
+        right: -0.3rem;
+        background-color: #f8a27b;
+      }
+
+      .testimonial-control i {
+        color: #f3aa88;
+        font-size: 1rem;
+      }
+
+      .testimonial-control.carousel-control-next i {
+        color: #ffffff;
+      }
+/* Expert Doctors Section */
+.expert-doctors-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.expert-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.expert-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.expert-lead {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Doctor Card */
+.doctor-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.doctor-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-image-wrap {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.doctor-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.doctor-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.doctor-role {
+  color: #777;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.doctor-stars {
+  color: #f2994a; /* Orange stars */
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Meta Info Icons & Text */
+.doctor-meta {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 15px;
+  margin-bottom: 25px;
+}
+
+.doctor-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 0.88rem;
+}
+
+.doctor-meta-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+}
+
+/* Button Variations */
+.doctor-btn {
+  width: 100%;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.doctor-btn-outline {
+  border: 1px solid #f8a27b;
+  color: #f8a27b;
+  background: transparent;
+}
+
+.doctor-btn-outline:hover {
+  background: #f8a27b;
+  color: #fff;
+}
+
+.doctor-btn-filled {
+  background-color: #f8a27b;
+  color: #fff;
+  border: 1px solid #f8a27b;
+}
+
+.doctor-btn-filled:hover {
+  background-color: #e88d65;
+  border-color: #e88d65;
+}
+:root {
+  /* Key Colors */
+  --bg-dark-teal: #06322b; /* Precise background color */
+  --input-bg: #10413a; /* Darker, contrasting input background */
+  --input-border: #1a4d47; /* Subtle border for inputs */
+  --accent-peach: #f7a582; /* Precise 'Book Now' button color */
+  --text-primary: #ffffff;
+  --text-muted: #d0d0d0; /* Muted color for subtext and icons */
+}
+
+/* 1. Main Section Container */
+.contact-section {
+  background-color: var(--bg-dark-teal);
+  color: var(--text-primary);
+  /* CRITICAL: The exact border-radius to match the image */
+  border-radius: 12px; 
+  /* Spacing around the main section */
+  margin: 80px auto; 
+  max-width: 1140px;
+  /* Reduced overall padding slightly to create a more compact look */
+  padding: 60px 40px;
+  /* Ensure content doesn't bleed out */
+  overflow: hidden;
+}
+
+/* 2. Form Input Field Styling - This is the main fix */
+.custom-input {
+  /* PRECISE styling for input and select fields */
+  background-color: var(--input-bg) !important;
+  border: 1px solid var(--input-border) !important;
+  border-radius: 6px !important; /* Slightly rounded input corners */
+  color: var(--text-primary) !important;
+  /* Crucial: Match the height and vertical centering */
+  height: 54px;
+  padding: 12px 20px;
+  /* Ensuring a compact font style */
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Consistent styling for placeholders and icons in inputs */
+.custom-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.custom-input::-webkit-calendar-picker-indicator {
+  /* Making sure date/time icons are also white */
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+input[type="date"].custom-input {
+  background-image: url("./images/Frame (6).png");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 18px 18px;
+  padding-right: 3.2rem;
+}
+
+/* Select arrow styling */
+select.custom-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 16px 12px;
+}
+
+/* Focusing effect to match the accent */
+.custom-input:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: none !important;
+  border-color: var(--accent-peach) !important;
+}
+
+/* 3. Icon and Text Row Fixes */
+.contact-icon-row i {
+  /* Correct color for the phone/geo icons */
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.contact-icon-row span {
+  font-weight: 400;
+  /* Correct alignment relative to the icon */
+  margin-left: 15px;
+  color: var(--text-muted);
+}
+
+/* 4. 'Book Now' Button - Full width and height */
+.btn-book {
+  background-color: var(--accent-peach) !important;
+  color: var(--text-primary) !important;
+  border: none;
+  /* Full height of the inputs */
+  height: 54px;
+  width: 100%;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 1.5rem; /* Precise spacing above the button */
+  transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* 5. Typography Fixes */
+.contact-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.contact-subtext {
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 40px;
+}
+/* Color & Typography Variables */
+:root {
+  --peach-main: #f7a582;
+  --text-dark: #3b3a3a;
+  --border-light: #e6e6e6;
+}
+
+/* Tab Bar Styling */
+.custom-tab-wrapper {
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.custom-tab-wrapper .nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 700;
+  padding: 20px 10px;
+  border-radius: 0;
+  background: transparent;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* The Active "Marked" Tab */
+.custom-tab-wrapper .nav-link.active {
+  background-color: var(--peach-main) !important;
+  color: var(--text-dark) !important;
+  /* Slight rounding inside the box border */
+  border-radius: 10px; 
+}
+
+/* More Details Button */
+.btn-outline-peach {
+  border: 1px solid var(--peach-main);
+  color: var(--peach-main);
+  background: transparent;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-outline-peach:hover {
+  background: var(--peach-main);
+  color: white;
+}
+
+/* Image Handling for Pixel Perfection */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.rounded-4 {
+  border-radius: 1.25rem !important;
+}
+      @media (min-width: 992px) {
+        .container.hero-wrap {
+          --bs-gutter-x: 3.5rem;
+          ;
+        }
+
+        .col-lg-6:last-child {
+          padding-left: 0.35rem;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .hero-wrap {
+          min-height: auto;
+          padding-top: 1.2rem;
+          padding-bottom: 1.8rem;
+        }
+
+        .hero-wrap::before {
+          top: 352px;
+          left: 50%;
+          width: 128px;
+          height: 128px;
+          transform: translateX(-68%) rotate(-2deg);
+          opacity: 0.18;
+        }
+
+        .hero-wrap::after {
+          left: 50%;
+          bottom: 118px;
+          width: 60px;
+          height: 88px;
+          transform: translateX(-145%);
+        }
+
+        .navbar-nav {
+          gap: 0;
+          padding-top: 1rem;
+        }
+
+        .hero-row {
+          min-height: auto;
+          padding-top: 2.2rem;
+          padding-bottom: 2rem;
+        }
+
+        .hero-copy {
+          max-width: 100%;
+          padding-top: 0;
+          text-align: center;
+          margin-inline: auto;
+        }
+
+        .hero-text {
+          margin-inline: auto;
+        }
+
+        .hero-art {
+          min-height: 470px;
+          margin-top: 1.6rem;
+        }
+
+        .doctors-visual {
+          position: relative;
+          top: 0;
+          right: 0;
+          margin-inline: auto;
+        }
+
+        .services-section {
+          padding: 4.25rem 0;
+        }
+
+        .services-media {
+          min-height: 560px;
+          margin-bottom: 2rem;
+        }
+
+        .services-copy {
+          padding-left: 0;
+        }
+
+        .info-card {
+          padding: 1.75rem 1.5rem;
+        }
+
+        .info-title {
+          font-size: 1.45rem;
+        }
+
+        .doctor-image {
+          height: 144px;
+        }
+
+      }
+
+      @media (max-width: 575.98px) {
+        .hero-wrap {
+          padding-bottom: 1.5rem;
+        }
+
+        .hero-wrap::before {
+          top: 312px;
+          width: 102px;
+          height: 102px;
+          transform: translateX(-78%) rotate(-2deg);
+          opacity: 0.16;
+        }
+
+        .hero-wrap::after {
+          width: 48px;
+          height: 72px;
+          bottom: 104px;
+          transform: translateX(-168%);
+          opacity: 0.1;
+        }
+
+        .navbar-brand img {
+          width: 165px;
+        }
+
+        .hero-title {
+          font-size: 2.45rem;
+        }
+
+        .hero-text {
+          font-size: 0.94rem;
+        }
+
+        .hero-art {
+          min-height: 310px;
+        }
+
+        .services-section {
+          padding: 3.5rem 0;
+        }
+
+        .services-title {
+          font-size: 2.2rem;
+        }
+
+        .service-card-title {
+          font-size: 1.75rem;
+        }
+
+        .services-media {
+          min-height: 420px;
+        }
+
+        .service-toggle-group {
+          display: flex;
+          width: 100%;
+          flex-wrap: wrap;
+        }
+
+        .service-toggle {
+          width: 100%;
+          text-align: left;
+        }
+
+        .contact-review-section {
+          padding: 1rem 0 4rem;
+        }
+
+        .expert-doctors-section {
+          padding: 0.5rem 0 4rem;
+        }
+
+        .info-strip {
+          margin-bottom: 3rem;
+        }
+
+        .review-title {
+          font-size: 2.2rem;
+        }
+
+        .expert-title {
+          font-size: 2.05rem;
+        }
+
+        .testimonial-carousel {
+          padding: 0;
+        }
+
+        .testimonial-control {
+          display: none;
+        }
+
+        .doctor-image {
+          height: 220px;
+        }
+
+      }
+
+      @media (max-width: 767.98px) {
+        .footer-section {
+          margin-top: 0 !important;
+          padding-top: 2.75rem !important;
+          padding-bottom: 2rem !important;
+        }
+
+        .footer-section .container {
+          max-width: 290px;
+        }
+
+        .footer-section .row {
+          row-gap: 1.9rem !important;
+        }
+
+        .footer-section .row > [class*="col-"] {
+          text-align: center;
+        }
+
+        .footer-section .row > [class*="col-"] .d-flex {
+          justify-content: center;
+        }
+
+        .footer-section .row > [class*="col-"] p.text-muted.small {
+          max-width: 252px;
+          margin-left: auto;
+          margin-right: auto;
+          line-height: 1.95;
+        }
+
+        .footer-section h5 {
+          margin-bottom: 1.35rem !important;
+        }
+
+        .footer-section ul {
+          margin-bottom: 0;
+        }
+
+        .footer-section ul li {
+          margin-bottom: 0.55rem;
+        }
+
+        .footer-section .btn {
+          min-width: 140px;
+          border-radius: 10px;
+          padding: 0.8rem 1.4rem !important;
+          font-weight: 600;
+        }
+
+        .footer-section hr {
+          margin-top: 1.9rem !important;
+          margin-bottom: 1rem !important;
+        }
+
+        .footer-section > .container > p.text-center.text-muted.small {
+          max-width: 210px;
+          margin-left: auto;
+          margin-right: auto;
+          line-height: 1.75;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="doc-shell">
+        
+        <div class="capsule cap-top-left">
+    <img src="./images/Vector.png" class="img-fluid" alt="">
+  </div>
+  
+  <div class="capsule cap-center">
+    <img src="./images/Vector2.png" class="img-fluid" alt="">
+  </div>
+<div class="container-fluid hero-wrap">
+
+  <div class="capsule cap-bottom-mid">
+    <img src="./images/Vector2.png" class="img-fluid" alt="">
+  </div>
+      <div class="container hero-wrap">
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+          <div class="container-fluid px-0 align-items-center">
+            <a class="navbar-brand me-lg-5" href="#">
+              <img src="./images/logo.png" alt="Doc House logo" />
+            </a>
+            <button
+              class="navbar-toggler border-0 shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#docHouseNav"
+              aria-controls="docHouseNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="docHouseNav">
+              <ul class="navbar-nav align-items-lg-center ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Appointment</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <section class="row hero-row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="hero-copy">
+              <h1 class="hero-title">Your Best Medical Help Center</h1>
+              <p class="hero-text">
+                Lorem Ipsum is simply dummy text they are printing typesetting has
+                been the industry&apos;s stardard.
+              </p>
+              <button class="btn hero-btn">All Service</button>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-art">
+              <div class="doctors-visual">
+                <img src="./images/doctors.png" alt="Doctors and medical staff" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+
+<section class="services-section py-5">
+  <div class="container py-lg-5">
+    <div class="row align-items-stretch g-5">
+      <div class="col-lg-5">
+        <div class="h-100">
+          <img src="./images/doc1.png" class="img-fluid rounded-4 h-100 object-fit-cover shadow-sm" alt="Doctor">
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="ps-lg-4">
+          <h2 class="fw-bold mb-3 display-6">Our Services</h2>
+          <p class="text-muted mb-4 pb-2 lh-lg">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </p>
+
+          <div class="custom-tab-wrapper mb-5">
+            <ul class="nav nav-pills" id="serviceTabs" role="tablist">
+              <li class="nav-item flex-fill" role="presentation">
+                <button class="nav-link active" id="cavity-tab" data-bs-toggle="pill" data-bs-target="#cavity-pane" type="button" role="tab">Cavity Protection</button>
+              </li>
+              <li class="nav-item flex-fill" id="cosmetic" role="presentation">
+                <button class="nav-link" id="cosmetic-tab" data-bs-toggle="pill" data-bs-target="#cosmetic-pane" type="button" role="tab">Cosmetic Dentistry</button>
+              </li>
+              <li class="nav-item flex-fill" role="presentation">
+                <button class="nav-link" id="surgery-tab" data-bs-toggle="pill" data-bs-target="#surgery-pane" type="button" role="tab">Oral Surgery</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content" id="serviceTabsContent">
+            <div class="tab-pane fade show active" id="cavity-pane" role="tabpanel">
+              <img src="./images/teeth.png" class="img-fluid rounded-4 mb-4 shadow-sm w-100" style="max-height: 350px; object-fit: cover;" alt="Dental Care">
+              <h3 class="fw-bold mb-3">Electro Gastrology Therapy</h3>
+              <p class="text-muted mb-3">Sed ut perspiciatis unde natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error.</p>
+              <p class="text-muted mb-4">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <button class="btn btn-outline-peach px-4 py-2 fw-bold">More Details</button>
+            </div>
+            </div>
+     
+             <div class="tab-content" id="cosmeticTabsContent">
+            <div class="tab-pane fade show active" id="cosmetic-pane" role="tabpanel">
+
+              <h3 class="fw-bold mb-3">Cosmetic Dentistry</h3>
+              <p class="text-muted mb-3">Sed ut perspiciatis unde natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error.</p>
+              <p class="text-muted mb-4">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <button class="btn btn-outline-peach px-4 py-2 fw-bold">More Details</button>
+            </div>
+            </div>
+     
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="contact-review-section">
+      <div class="container">
+        <div class="info-strip">
+          <div class="row g-3 g-lg-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="info-card info-card-dark">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="info-icon">
+                    <i class="bi bi-clock"></i>
+                  </div>
+                  <div>
+                    <h3 class="info-title">Opening Hours</h3>
+                    <p class="info-text">Open 9.00 am to 5.00pm Everyday</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="info-card info-card-accent">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="info-icon">
+                    <i class="bi bi-geo-alt"></i>
+                  </div>
+                  <div>
+                    <h3 class="info-title">Our Locations</h3>
+                    <p class="info-text">Dhanmondi 17, Dhaka -1200, Bangladesh</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="info-card info-card-dark">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="info-icon">
+                    <i class="bi bi-telephone-outbound"></i>
+                  </div>
+                  <div>
+                    <h3 class="info-title">Contact Us</h3>
+                    <p class="info-text">+88 01750 00 00 00</p>
+                    <p class="info-text">+88 01750 00 00 00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-header">
+          <h2 class="review-title">What Our Patients Says</h2>
+          <p class="review-lead">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inve ntore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </p>
+        </div>
+
+        <div id="patientReviewCarousel" class="carousel slide testimonial-carousel" data-bs-ride="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <div class="col-lg-6">
+                  <article class="testimonial-card">
+                    <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                      <div class="d-flex align-items-center gap-3">
+                        <img src="./images/av1.jpg" alt="Awlad Hossain" class="testimonial-avatar" />
+                        <div>
+                          <h3 class="testimonial-name">Awlad Hossain</h3>
+                          <p class="testimonial-role">Product Designer</p>
+                        </div>
+                      </div>
+                      <div class="quote-mark">
+                        <img src="./images/quote.png" alt="" />
+                      </div>
+                    </div>
+                    <p class="testimonial-text">
+                      Lorem Ipsum has been the industry's standard dummy text ever
+                      since the 1500s, when an unknow printer tool a galley of
+                      type and scrambled it to make type specimen book has
+                      survived not only five centuries.
+                    </p>
+                  </article>
+                </div>
+
+                <div class="col-lg-6">
+                  <article class="testimonial-card">
+                    <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                      <div class="d-flex align-items-center gap-3">
+                        <img src="./images/av2.jpg" alt="Farhana Hossain" class="testimonial-avatar" />
+                        <div>
+                          <h3 class="testimonial-name">Farhana Hossain</h3>
+                          <p class="testimonial-role">Brand Designer</p>
+                        </div>
+                      </div>
+                      <div class="quote-mark">
+                        <img src="./images/quote.png" alt="" />
+                      </div>
+                    </div>
+                    <p class="testimonial-text">
+                      Lorem Ipsum has been the industry's standard dummy text ever
+                      since the 1500s, when an unknow printer tool a galley of
+                      type and scrambled it to make type specimen book has
+                      survived not only five centuries.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row g-4">
+                <div class="col-lg-6">
+                  <article class="testimonial-card">
+                    <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                      <div class="d-flex align-items-center gap-3">
+                        <img src="./images/av1.jpg" alt="Awlad Hossain" class="testimonial-avatar" />
+                        <div>
+                          <h3 class="testimonial-name">Awlad Hossain</h3>
+                          <p class="testimonial-role">Product Designer</p>
+                        </div>
+                      </div>
+                      <div class="quote-mark">
+                        <img src="./images/quote.png" alt="" />
+                      </div>
+                    </div>
+                    <p class="testimonial-text">
+                      Lorem Ipsum has been the industry's standard dummy text ever
+                      since the 1500s, when an unknow printer tool a galley of
+                      type and scrambled it to make type specimen book has
+                      survived not only five centuries.
+                    </p>
+                  </article>
+                </div>
+
+                <div class="col-lg-6">
+                  <article class="testimonial-card">
+                    <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                      <div class="d-flex align-items-center gap-3">
+                        <img src="./images/av2.jpg" alt="Farhana Hossain" class="testimonial-avatar" />
+                        <div>
+                          <h3 class="testimonial-name">Farhana Hossain</h3>
+                          <p class="testimonial-role">Brand Designer</p>
+                        </div>
+                      </div>
+                      <div class="quote-mark">
+                        <img src="./images/quote.png" alt="" />
+                      </div>
+                    </div>
+                    <p class="testimonial-text">
+                      Lorem Ipsum has been the industry's standard dummy text ever
+                      since the 1500s, when an unknow printer tool a galley of
+                      type and scrambled it to make type specimen book has
+                      survived not only five centuries.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev testimonial-control"
+            type="button"
+            data-bs-target="#patientReviewCarousel"
+            data-bs-slide="prev"
+          >
+            <i class="bi bi-arrow-left"></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            class="carousel-control-next testimonial-control"
+            type="button"
+            data-bs-target="#patientReviewCarousel"
+            data-bs-slide="next"
+          >
+            <i class="bi bi-arrow-right"></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  <section class="expert-doctors-section">
+  <div class="container">
+    <div class="expert-header">
+      <h2 class="expert-title">Our Expert Doctors</h2>
+      <p class="expert-lead">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <article class="doctor-card">
+          <div class="doctor-image-wrap">
+            <img src="./images/av3.jpg" alt="Doctor" class="doctor-image" />
+          </div>
+          <h3 class="doctor-name">Karyen Anderson</h3>
+          <p class="doctor-role">BTP - Senior Physiotherapist</p>
+          <div class="doctor-stars">★★★★★</div>
+
+          <div class="doctor-meta">
+            <div class="doctor-meta-item">
+              <img src="./images/Frame (3).png" alt="" class="doctor-meta-icon" />
+              <span>Dhanmondi, Dhaka, Bangladesh</span>
+            </div>
+            <div class="doctor-meta-item">
+              <img src="./images/Vector (4).png" alt="" class="doctor-meta-icon" />
+              <span>Available On Mon, 22 December</span>
+            </div>
+            <div class="doctor-meta-item">
+              <img src="./images/Frame (1).png" alt="" class="doctor-meta-icon" />
+              <span>$15</span>
+            </div>
+          </div>
+          <a href="./docprofile.html" class="btn doctor-btn doctor-btn-outline">View Profile</a>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article class="doctor-card">
+          <div class="doctor-image-wrap">
+            <img src="./images/av4.jpg" alt="Doctor" class="doctor-image" />
+          </div>
+          <h3 class="doctor-name">Karyen Anderson</h3>
+          <p class="doctor-role">BTP - Senior Physiotherapist</p>
+          <div class="doctor-stars">★★★★★</div>
+
+          <div class="doctor-meta">
+            <div class="doctor-meta-item">
+              <img src="./images/Frame (3).png" alt="" class="doctor-meta-icon" />
+              <span>Dhanmondi, Dhaka, Bangladesh</span>
+            </div>
+            <div class="doctor-meta-item">
+              <img src="./images/Vector (4).png" alt="" class="doctor-meta-icon" />
+              <span>Available On Mon, 22 December</span>
+            </div>
+            <div class="doctor-meta-item">
+              <img src="./images/Frame (1).png" alt="" class="doctor-meta-icon" />
+              <span>$15</span>
+            </div>
+          </div>
+          <a href="./docprofile.html" class="btn doctor-btn doctor-btn-filled">View Profile</a>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <article class="doctor-card">
+          <div class="doctor-image-wrap">
+            <img src="./images/av5.jpg" alt="Doctor" class="doctor-image" />
+          </div>
+          <h3 class="doctor-name">Karyen Anderson</h3>
+          <p class="doctor-role">BTP - Senior Physiotherapist</p>
+          <div class="doctor-stars">★★★★★</div>
+
+          <div class="doctor-meta">
+            <div class="doctor-meta-item">
+              <img src="./images/Frame (3).png" alt="" class="doctor-meta-icon" />
+              <span>Dhanmondi, Dhaka, Bangladesh</span>
+            </div>
+            <div class="doctor-meta-item">
+              <img src="./images/Vector (4).png" alt="" class="doctor-meta-icon" />
+              <span>Available On Mon, 22 December</span>
+            </div>
+            <div class="doctor-meta-item">
+              <img src="./images/Frame (1).png" alt="" class="doctor-meta-icon" />
+              <span>$15</span>
+            </div>
+          </div>
+          <a href="./docprofile.html" class="btn doctor-btn doctor-btn-outline">View Profile</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact-section py-5" style="background-color: #07332f; border-radius: 10px; margin: 50px auto; max-width: 1140px; color: #fff;">
+  <div class="container py-4">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <h2 class="fw-bold mb-4">Contact With Us</h2>
+        <p class="text-light-emphasis mb-4">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
+        </p>
+        <div class="d-flex align-items-center mb-3">
+          <div class="me-3 p-2 rounded-circle" style="background: rgba(255,255,255,0.1);"><i class="bi bi-telephone text-white"></i></div>
+          <span>+88 01750 14 14 14</span>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="me-3 p-2 rounded-circle" style="background: rgba(255,255,255,0.1);"><i class="bi bi-geo-alt text-white"></i></div>
+          <span>Dhanmondi, Dhaka, Bangladesh</span>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <form id="appointmentForm" class="row g-3">
+          <div class="col-md-6">
+            <input type="text" name="name" class="form-control custom-input" placeholder="Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="email" name="email" class="form-control custom-input" placeholder="Email" required>
+          </div>
+          <div class="col-md-6">
+            <input type="text" name="mobileNumber" class="form-control custom-input" placeholder="Mobile Number" required>
+          </div>
+          <div class="col-md-6">
+            <input type="text" name="doctorName" class="form-control custom-input" placeholder="Doctor Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="date" name="appointmentDate" class="form-control custom-input" required>
+          </div>
+          <div class="col-md-6">
+            <select name="appointmentTime" class="form-select custom-input" required>
+              <option value="" selected disabled>Time</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="02:00 PM">02:00 PM</option>
+              <option value="04:00 PM">04:00 PM</option>
+            </select>
+          </div>
+          <div class="col-12 mt-4">
+            <button id="appointmentSubmitBtn" type="submit" class="btn w-100 py-3 fw-bold" style="background-color: #f7a582; color: #fff; border: none;">Book Now</button>
+            <p id="appointmentStatus" class="small text-white mt-3 mb-0" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer-section py-5 mt-5" style="background-color: #f3f3f3;">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-3">
+        <div class="d-flex align-items-center mb-3">
+          <img src="./images/Group 1.png" alt="Doc House" height="40">
+          <h4 class="ms-2 mb-0 fw-bold"><span style="color: #f7a582;">Doc</span> House</h4>
+        </div>
+        <p class="text-muted small">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. has been since the printer took.
+        </p>
+        <button class="btn btn-outline-danger mt-2 px-4 py-2" style="border-color: #f7a582; color: #f7a582;">Appointment</button>
+      </div>
+
+      <div class="col-lg-2 offset-lg-1">
+        <h5 class="fw-bold mb-4">Quick Links</h5>
+        <ul class="list-unstyled text-muted small lh-lg">
+          <li>About Us</li>
+          <li>Service</li>
+          <li>Doctors</li>
+          <li>Departments</li>
+          <li>Online Payment</li>
+          <li>Contact Us</li>
+          <li>My Account</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h5 class="fw-bold mb-4">Doc House Services</h5>
+        <ul class="list-unstyled text-muted small lh-lg">
+          <li>Pediatric Clinic</li>
+          <li>Diagnosis Clinic</li>
+          <li>Cardiac Clinic</li>
+          <li>Laboratory Analysis</li>
+          <li>Gynecological Clinic</li>
+          <li>Personal Counseling</li>
+          <li>Dental Clinic</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h5 class="fw-bold mb-4">Working Hours</h5>
+        <ul class="list-unstyled text-muted small lh-lg">
+          <li>Monday - 10 am to 7 pm</li>
+          <li>Tuesday - 10 am to 7 pm</li>
+          <li>Wednesday - 10 am to 7 pm</li>
+          <li>Thursday - 10 am to 7 pm</li>
+          <li>Friday - 10 am to 7 pm</li>
+          <li>Saturday - 10 am to 7 pm</li>
+          <li>Sunday - 10 am to 7 pm</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4 text-muted">
+    <p class="text-center text-muted small">Copyright © 2026 - All right reserved by Doc House Ltd</p>
+  </div>
+</footer>
+
+    <script>
+      const appointmentForm = document.getElementById("appointmentForm");
+      const appointmentStatus = document.getElementById("appointmentStatus");
+      const appointmentSubmitBtn = document.getElementById("appointmentSubmitBtn");
+
+      if (appointmentForm && appointmentStatus && appointmentSubmitBtn) {
+        appointmentForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const formData = new FormData(appointmentForm);
+          const payload = Object.fromEntries(formData.entries());
+
+          appointmentSubmitBtn.disabled = true;
+          appointmentStatus.textContent = "Sending your appointment request...";
+
+          try {
+            const response = await fetch("./api/book", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(payload),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+              throw new Error(result.message || "Something went wrong. Please try again.");
+            }
+
+            appointmentStatus.textContent = result.message;
+            appointmentForm.reset();
+          } catch (error) {
+            appointmentStatus.textContent = error.message || "Unable to send your request right now.";
+          } finally {
+            appointmentSubmitBtn.disabled = false;
+          }
+        });
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
