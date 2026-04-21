@@ -132,17 +132,16 @@
       }
 .hero-title {
   color: var(--text-main);
-  /* Using a slightly larger font-size and tighter line-height for that "Help Center" look */
   font-size: clamp(2.5rem, 3.5vw, 4.5rem); 
   line-height: 1.1; 
-  letter-spacing: -0.02em; /* Tightening the letters slightly matches the image better */
+  letter-spacing: -0.02em;
   font-weight: 200;
   margin-top:1rem;
 }
 
 .hero-text {
   color: var(--text-soft);
-  max-width: 32rem; /* Increased slightly to allow for better flow */
+  max-width: 32rem;
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 400;
@@ -189,12 +188,11 @@
 
 .capsule {
   position: absolute;
-  z-index: 1; /* Sit behind the text and doctors */
+  z-index: 1;
   pointer-events: none;
-  opacity: 1; /* Matching the subtle Figma look */
+  opacity: 1;
 }
 
-/* Big capsule at the top left */
 .cap-top-left {
   top:-3%;
   left:0%;
@@ -202,7 +200,6 @@
 
 }
 
-/* Medium capsule floating in the center/middle */
 .cap-center {
   top: 10%;
   left: 40%;
@@ -210,7 +207,6 @@
   transform: rotate(5deg);
 }
 
-/* Small capsule at the very bottom middle */
 .cap-bottom-mid {
   bottom: 6%;
   left:42%;
@@ -501,7 +497,6 @@
       .testimonial-control.carousel-control-next i {
         color: #ffffff;
       }
-/* Expert Doctors Section */
 .expert-doctors-section {
   padding: 80px 0;
   background-color: #ffffff;
@@ -526,7 +521,6 @@
   line-height: 1.6;
 }
 
-/* Doctor Card */
 .doctor-card {
   border: 1px solid #e0e0e0;
   border-radius: 12px;
@@ -566,12 +560,11 @@
 }
 
 .doctor-stars {
-  color: #f2994a; /* Orange stars */
+  color: #f2994a;
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
-/* Meta Info Icons & Text */
 .doctor-meta {
   border-top: 1px solid #f0f0f0;
   padding-top: 15px;
@@ -593,7 +586,6 @@
   opacity: 0.6;
 }
 
-/* Button Variations */
 .doctor-btn {
   width: 100%;
   padding: 12px;
@@ -624,52 +616,43 @@
   border-color: #e88d65;
 }
 :root {
-  /* Key Colors */
-  --bg-dark-teal: #06322b; /* Precise background color */
-  --input-bg: #10413a; /* Darker, contrasting input background */
-  --input-border: #1a4d47; /* Subtle border for inputs */
-  --accent-peach: #f7a582; /* Precise 'Book Now' button color */
+  --bg-dark-teal: #06322b;
+  --input-bg: #10413a;
+  --input-border: #1a4d47;
+  --accent-peach: #f7a582;
   --text-primary: #ffffff;
-  --text-muted: #d0d0d0; /* Muted color for subtext and icons */
+  --text-muted: #d0d0d0;
 }
 
-/* 1. Main Section Container */
 .contact-section {
   background-color: var(--bg-dark-teal);
   color: var(--text-primary);
-  /* CRITICAL: The exact border-radius to match the image */
+
   border-radius: 12px; 
-  /* Spacing around the main section */
+  
   margin: 80px auto; 
   max-width: 1140px;
-  /* Reduced overall padding slightly to create a more compact look */
   padding: 60px 40px;
-  /* Ensure content doesn't bleed out */
   overflow: hidden;
 }
-
-/* 2. Form Input Field Styling - This is the main fix */
 .custom-input {
-  /* PRECISE styling for input and select fields */
+  
   background-color: var(--input-bg) !important;
   border: 1px solid var(--input-border) !important;
-  border-radius: 6px !important; /* Slightly rounded input corners */
+  border-radius: 6px !important;
   color: var(--text-primary) !important;
-  /* Crucial: Match the height and vertical centering */
   height: 54px;
   padding: 12px 20px;
-  /* Ensuring a compact font style */
   font-size: 0.95rem;
   font-weight: 400;
 }
 
-/* Consistent styling for placeholders and icons in inputs */
 .custom-input::placeholder {
   color: white;
 }
 
 .custom-input::-webkit-calendar-picker-indicator {
-  /* Making sure date/time icons are also white */
+
   opacity: 0;
   pointer-events: none;
 }
@@ -694,8 +677,6 @@ input[type="date"].custom-input {
   background: transparent url("./images/Frame (6).png") center center / 18px 18px no-repeat;
   z-index: 2;
 }
-
-/* Select arrow styling */
 select.custom-input {
 
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
@@ -709,7 +690,6 @@ select.custom-input option {
   color: var(--text-primary);
 }
 
-/* Focusing effect to match the accent */
 .custom-input:focus {
   background-color: rgba(255, 255, 255, 0.08) !important;
   box-shadow: none !important;
@@ -724,7 +704,6 @@ select.custom-input option {
 
 .contact-icon-row span {
   font-weight: 400;
-  /* Correct alignment relative to the icon */
   margin-left: 15px;
   color: var(--text-muted);
 }
@@ -747,7 +726,6 @@ select.custom-input option {
   filter: brightness(1.1);
 }
 
-/* 5. Typography Fixes */
 .contact-title {
   font-weight: 700;
   font-size: 2.2rem;
@@ -760,14 +738,12 @@ select.custom-input option {
   max-width: 420px;
   margin-bottom: 40px;
 }
-/* Color & Typography Variables */
 :root {
   --peach-main: #f7a582;
   --text-dark: #3b3a3a;
   --border-light: #e6e6e6;
 }
 
-/* Tab Bar Styling */
 .custom-tab-wrapper {
   border: 1px solid var(--border-light);
   border-radius: 12px;
@@ -785,15 +761,12 @@ select.custom-input option {
   border: none;
 }
 
-/* The Active "Marked" Tab */
 .custom-tab-wrapper .nav-link.active {
   background-color: var(--peach-main) !important;
   color: var(--text-dark) !important;
-  /* Slight rounding inside the box border */
   border-radius: 10px; 
 }
 
-/* More Details Button */
 .btn-outline-peach {
   border: 1px solid var(--peach-main);
   color: var(--peach-main);
@@ -807,7 +780,6 @@ select.custom-input option {
   color: white;
 }
 
-/* Image Handling for Pixel Perfection */
 .object-fit-cover {
   object-fit: cover;
 }
