@@ -1603,15 +1603,19 @@ select.custom-input option {
           appointmentStatus.textContent = "Sending your appointment request...";
 
           try {
-            const response = await fetch("./api/book", {
+            const response = await fetch("/api/book", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
+                "Accept": "application/json",
               },
               body: JSON.stringify(payload),
             });
 
-            const result = await response.json();
+            const responseType = response.headers.get("content-type") || "";
+            const result = responseType.includes("application/json")
+              ? await response.json()
+              : { message: "The server returned an unexpected response." };
 
             if (!response.ok) {
               throw new Error(result.message || "Something went wrong. Please try again.");
