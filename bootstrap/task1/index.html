@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -34,7 +34,7 @@
 
       body {
         margin: 0;
-        font-family: "Outfit", sans-serif;
+        font-family: "Source Sans 3", sans-serif;
         background-color: white;
       }
 
@@ -132,11 +132,11 @@
       }
 .hero-title {
   color: var(--text-main);
-  font-size: clamp(2.5rem, 3.5vw, 4.5rem); 
+  font-size: 3rem;
   line-height: 1.1; 
   letter-spacing: -0.02em;
   font-weight: 200;
-  margin-top:1rem;
+  margin-top:0.1rem;
 }
 
 .hero-text {
@@ -751,7 +751,19 @@ select.custom-input option {
   padding: 0;
 }
 
+.custom-tab-wrapper .nav {
+  display: flex;
+  width: 100%;
+}
+
+.custom-tab-wrapper .nav-item {
+  flex: 1 1 0;
+}
+
 .custom-tab-wrapper .nav-link {
+  display: block;
+  width: 100%;
+  text-align: center;
   color: var(--text-dark) !important;
   font-weight: 700;
   padding: 20px 10px;
@@ -1147,6 +1159,12 @@ select.custom-input option {
               <h3 class="fw-bold mb-3">Electro Gastrology Therapy</h3>
               <p class="text-muted mb-3">Sed ut perspiciatis unde natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error.</p>
               <p class="text-muted mb-4">Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <button class="btn btn-outline-peach px-4 py-2 fw-bold">More Details</button>
+            </div>
+            <div class="tab-pane fade" id="surgery-pane" role="tabpanel">
+              <h3 class="fw-bold mb-3">Oral Surgery</h3>
+              <p class="text-muted mb-3">Our oral surgery services include safe tooth extraction, wisdom tooth removal, and minor corrective procedures performed with modern techniques.</p>
+              <p class="text-muted mb-4">Each treatment plan is personalized after diagnosis to ensure comfort, faster recovery, and better long-term oral health outcomes.</p>
               <button class="btn btn-outline-peach px-4 py-2 fw-bold">More Details</button>
             </div>
             </div>
